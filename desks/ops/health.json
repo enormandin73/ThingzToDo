@@ -1,0 +1,72 @@
+{
+  "generated_at": "2026-10-21 19:45:56",
+  "gateway_running": true,
+  "agents": {
+    "scout": {
+      "profile": "scout",
+      "profile_dir_exists": true,
+      "has_config": true,
+      "has_soul": true,
+      "has_memory": true,
+      "errors": [],
+      "desk": "/Users/martennormandin/thingztodo/desks/research",
+      "desk_exists": true,
+      "newest_output": "2026-10-21 18:14",
+      "hours_since_output": 1.5,
+      "stale": false,
+      "reason": "",
+      "name": "Scout",
+      "role": "Chief Research & Marketing Officer"
+    },
+    "architect": {
+      "profile": "architect",
+      "profile_dir_exists": true,
+      "has_config": true,
+      "has_soul": true,
+      "has_memory": true,
+      "errors": [],
+      "desk": "/Users/martennormandin/thingztodo/desks/engineering",
+      "desk_exists": true,
+      "newest_output": "2026-10-21 18:56",
+      "hours_since_output": 0.8,
+      "stale": false,
+      "reason": "",
+      "name": "Forge",
+      "role": "Principal Software Architect"
+    },
+    "sentinel": {
+      "profile": "sentinel",
+      "profile_dir_exists": true,
+      "has_config": true,
+      "has_soul": true,
+      "has_memory": true,
+      "errors": [],
+      "desk": "/Users/martennormandin/thingztodo/desks/quality",
+      "desk_exists": true,
+      "newest_output": "2026-10-21 18:01",
+      "hours_since_output": 1.7,
+      "stale": false,
+      "reason": "",
+      "name": "Sentinel",
+      "role": "Head of Quality & Release"
+    },
+    "concierge": {
+      "profile": "concierge",
+      "profile_dir_exists": true,
+      "has_config": true,
+      "has_soul": true,
+      "has_memory": true,
+      "errors": [],
+      "desk": "/Users/martennormandin/thingztodo/desks/ops",
+      "desk_exists": true,
+      "newest_output": "2026-10-21 19:45",
+      "hours_since_output": 0.0,
+      "stale": false,
+      "reason": "",
+      "name": "Concierge",
+      "role": "Chief Operating Officer"
+    }
+  },
+  "problems": [],
+  "blind_spot": "Concierge cannot restart itself. If this script runs inside Concierge's own process, a Concierge failure is invisible."
+}

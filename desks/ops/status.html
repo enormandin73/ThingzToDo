@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ThingzToDo — Agent Team Status</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 32px 24px 64px;
+    background: #0d1117; color: #e6edf3;
+    font: 15px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  .wrap { max-width: 900px; margin: 0 auto; }
+  h1 { font-size: 26px; margin: 0 0 4px; }
+  h2 { font-size: 17px; margin: 0; }
+  .sub { color: #8b949e; margin: 0 0 28px; font-size: 14px; }
+  .top {
+    display: flex; gap: 12px; flex-wrap: wrap;
+    padding: 14px 18px; margin-bottom: 26px;
+    background: #161b22; border: 1px solid #30363d; border-radius: 10px;
+  }
+  .top div { font-size: 14px; }
+  .top b { color: #e6edf3; }
+  .grid {
+    display: grid; gap: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  }
+  .card {
+    background: #161b22; border: 1px solid #30363d;
+    border-left: 4px solid #30363d; border-radius: 10px; padding: 16px 18px;
+  }
+  .card.ok { border-left-color: #3fb950; }
+  .card.stale { border-left-color: #d29922; }
+  .card.down { border-left-color: #f85149; }
+  .card-head { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .role { color: #8b949e; font-size: 13px; }
+  .badge {
+    font-size: 11px; font-weight: 700; letter-spacing: .06em;
+    padding: 3px 9px; border-radius: 20px; text-transform: uppercase;
+  }
+  .badge.ok { background: #1a3d24; color: #3fb950; }
+  .badge.stale { background: #3d2f0a; color: #d29922; }
+  .badge.down { background: #4a1518; color: #f85149; }
+  .meta { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 13px; color: #8b949e; }
+  .meta b { color: #e6edf3; }
+  code {
+    background: #0d1117; padding: 2px 6px; border-radius: 5px;
+    font-size: 12.5px; color: #79c0ff;
+  }
+  .files { margin: 12px 0 0; padding-left: 18px; font-size: 13px; color: #8b949e; }
+  .note { margin: 10px 0 0; font-size: 13px; color: #d29922; }
+  .problems {
+    margin-top: 30px; padding: 18px 20px;
+    background: #2d1215; border: 1px solid #f8514944; border-radius: 10px;
+  }
+  .problems h2 { color: #f85149; margin-bottom: 10px; }
+  .problems ul { margin: 0; padding-left: 20px; color: #ffa198; }
+  .foot { margin-top: 36px; font-size: 12.5px; color: #6e7681; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>ThingzToDo — Agent Team Status</h1>
+  <p class="sub">Generated 2026-10-21 19:45:56 · auto-refreshed by <code>thingztodo_health_check.py</code></p>
+
+  <div class="top">
+    <div>Gateway: <b>running</b></div>
+    <div>Agents: <b>4</b></div>
+    <div>Healthy: <b>4</b></div>
+    <div>Stale: <b>0</b></div>
+    <div>Down: <b>0</b></div>
+  </div>
+
+  <div class="grid">
+    <div class="card ok">
+      <div class="card-head">
+        <span class="badge ok">OK</span>
+        <h2>Scout</h2>
+        <span class="role">Chief Research &amp; Marketing Officer</span>
+      </div>
+      <div class="meta">
+        <span>profile <code>scout</code></span>
+        <span>last output <b>2026-10-21 18:14</b></span>
+        <span>16 files in <code>desks/research/</code></span>
+      </div>
+      <ul class="files"><li><code>competitors.md</code></li><li><code>README.md</code></li><li><code>count_urls.py</code></li><li><code>check_final_urls.py</code></li></ul>
+      
+    </div>
+    <div class="card ok">
+      <div class="card-head">
+        <span class="badge ok">OK</span>
+        <h2>Forge</h2>
+        <span class="role">Principal Software Architect</span>
+      </div>
+      <div class="meta">
+        <span>profile <code>architect</code></span>
+        <span>last output <b>2026-10-21 18:56</b></span>
+        <span>8 files in <code>desks/engineering/</code></span>
+      </div>
+      <ul class="files"><li><code>STATUS.md</code></li><li><code>decisions/ADR-0001-v1-architecture.md</code></li><li><code>decisions/2026-10-21-geo-search-approach.md</code></li><li><code>decisions/2026-10-21-outbound-email-path-readiness.md</code></li></ul>
+      
+    </div>
+    <div class="card ok">
+      <div class="card-head">
+        <span class="badge ok">OK</span>
+        <h2>Sentinel</h2>
+        <span class="role">Head of Quality &amp; Release</span>
+      </div>
+      <div class="meta">
+        <span>profile <code>sentinel</code></span>
+        <span>last output <b>2026-10-21 18:01</b></span>
+        <span>2 files in <code>desks/quality/</code></span>
+      </div>
+      <ul class="files"><li><code>STATUS.md</code></li><li><code>TEST-STRATEGY.md</code></li></ul>
+      
+    </div>
+    <div class="card ok">
+      <div class="card-head">
+        <span class="badge ok">OK</span>
+        <h2>Concierge</h2>
+        <span class="role">Chief Operating Officer</span>
+      </div>
+      <div class="meta">
+        <span>profile <code>concierge</code></span>
+        <span>last output <b>2026-10-21 19:45</b></span>
+        <span>6 files in <code>desks/ops/</code></span>
+      </div>
+      <ul class="files"><li><code>STATUS.md</code></li><li><code>health.json</code></li><li><code>RUNBOOK.md</code></li><li><code>alert_state.json</code></li></ul>
+      
+    </div>
+  </div>
+
+  
+
+  <p class="foot">
+    Company home: <code>~/thingztodo/</code> · Desks: <code>~/thingztodo/desks/</code><br>
+    Health data: <code>~/thingztodo/desks/ops/health.json</code> ·
+    Runbook: <code>~/thingztodo/desks/ops/RUNBOOK.md</code>
+  </p>
+</div>
+</body>
+</html>
