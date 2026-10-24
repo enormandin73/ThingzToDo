@@ -31,7 +31,9 @@ the workstream ADRs in `desks/engineering/decisions/` and integrated here.
 
 | ADR | Status |
 |---|---|
-| `ADR-0001-v1-architecture.md` | **Accepted (integrated record)** — this document consolidates every architecture decision (product shape, hosting, stack, geo search, engine, ingestion, failure handling, cost). |
+| `ADR-0001-v1-architecture.md` | **Accepted (integrated record)** — consolidated architecture decision record. **Auth/identity section amended in place 2026-10-22** (REVERSED: accounts added) to reflect the CEO-directed account direction. See `2026-10-22-authentication-provider-and-accounts.md`. |
+| `2026-10-22-interface-shape-map-first-chat-sidecar.md` | **Accepted (design)** — interface architecture: map-first, chat-as-sidecar; canonical `FilterState` schema; map provider (Leaflet + OSM tiles); SSR; voice stance; LLM boundary; degradation. |
+| `2026-10-22-authentication-provider-and-accounts.md` | **Accepted** — authentication provider & account decision record. Verdict: **adopt Clerk (Hobby) for MVP**; self-hosted identity weighed honestly. Must accompany the ADR-0001 §4 reversal. |
 | `2026-10-21-activity-filtering-engine-constraints-matching.md` | Accepted (design) |
 | `2026-10-21-geo-search-approach.md` | Accepted (design) |
 | `2026-10-21-web-first-vs-app-first-and-hosting-target.md` | Accepted (design) |

@@ -27,6 +27,7 @@ Triage → Todo → Ready → In progress → (Blocked) → Done
 | Architecture, design, implementation, developer tooling | **Forge** |
 | Test strategy, QA automation, release readiness, production gate | **Sentinel** |
 | Agent health, restarts, alerting, operational reporting | **Concierge** |
+| Product direction, UX/UI, information architecture, the product decision record | **Curator** |
 | Direction, disputes, spend approval | **Eric** |
 
 ## Card anatomy

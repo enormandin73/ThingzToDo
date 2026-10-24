@@ -15,6 +15,7 @@ in the company and by Eric.
 | **Forge** | `architect` | Principal Software Architect | `desks/engineering/` |
 | **Sentinel** | `sentinel` | Head of Quality & Release | `desks/quality/` |
 | **Concierge** | `concierge` | Chief Operating Officer | `desks/ops/` |
+| **Curator** | `curator` | Head of Product & Design | `desks/product/` |
 | **Irock** | *(orchestrator, this session)* | Creates and oversees agents | — |
 
 ## Talking to an agent

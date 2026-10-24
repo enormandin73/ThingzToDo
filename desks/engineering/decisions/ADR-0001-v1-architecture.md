@@ -4,6 +4,9 @@
 **Owner:** Forge (Principal Software Architect)
 **Date:** 2026-10-21
 **Status:** Accepted
+
+> **⚠️ AMENDMENT (2026-10-22, Forge):** `ADR-0001 §4` (*Auth / identity — None for MVP. Nothing in the product requires accounts today.*) is **REVERSED**. ThingzToDo **will have user accounts** — two types from day one (consumer, passwordless; merchant/organizer; anonymous by default; "Save this plan" → sign-in). Owner: Forge. Reason: the CEO directed accounts as an *earned escalation*, not an entry gate, so the merchant dashboard exists from day one and "Save this plan" persistence works. The reversal is loud and in writing here and in `desks/engineering/decisions/2026-10-22-authentication-provider-and-accounts.md` §1. Wire recommendation: **Clerk (Hobby)** for the MVP; a self-hosted identity (Lucia + better-sqlite3) was weighed honestly (same ADR §5) and rejected on build cost and security-surface grounds, not comfort. See that document §§1–7 for the full record.
+
 **Parent decision record:** This is the integrated, consolidated architecture decision record for ThingzToDo v1. It absorbs the decisions authored as separate ADRs by the engineering workstreams and presents them as one coherent architectural picture. The workstream ADRs remain the canonical primary sources; this document is the "single click to understand the architecture" view.
 
 **Related ADRs (workstream outputs):**
@@ -422,7 +425,7 @@ The current state: none of the four "runs" items (1–4) have produced a committ
 - **Recommendation engine:** two-tier hard-gate + soft-score; never-fabricate; degrade ladder.
 - **Ingestion:** curated core + best-effort free-tier enrichment + moderated user-generated.
 - **Failure handling:** degrade ladder (full/partial/sparse/empty); every external service is best-effort; no fabricated results.
-- **Auth/identity:** none for MVP — kill the target, not the scope.
+- **Auth/identity:** REVERSED 2026-10-22. Passwordless (magic link / OTP) + Apple / Google OAuth; **consumer** (free) + **merchant/organizer** account types; anonymous by default. "Save this plan" → sign-in. Identity primitive: Clerk (Hobby). Product `users` table in our own SQLite, keyed by Clerk `userId`. Engine stays anonymous-forever. See `2026-10-22-authentication-provider-and-accounts.md`.
 
 ---
 

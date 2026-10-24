@@ -34,6 +34,7 @@ work starts now. Everything below is direction, not done.
 | **Forge** | Principal Software Architect | `desks/engineering/` |
 | **Sentinel** | Head of Quality & Release | `desks/quality/` |
 | **Concierge** | Chief Operating Officer | `desks/ops/` |
+| **Curator** | Head of Product & Design | `desks/product/` |
 | **Irock** | Orchestrator (oversees the above) | — |
 
 Agent profile directories live at `~/.hermes/profiles/<name>/`.
@@ -47,6 +48,9 @@ These are real, not decorative:
 - **Sentinel** holds the **production gate**. Nothing ships to production without
   Sentinel's sign-off **and** Eric's explicit approval. Two keys.
 - **Scout** owns market truth and messaging. Scout does not set the build order alone.
+- **Curator** owns product direction, UX/UI, and the product decision record. Curator does
+  not write production code and does not set market messaging. Product decisions are
+  raised to Eric in the `#product` Discord channel.
 - **Concierge** keeps every agent alive and alerts Eric when one is not. Concierge does
   not do the other agents' work.
 - **Eric** sets direction, resolves disputes, and approves spend.
@@ -63,16 +67,22 @@ These are real, not decorative:
 - **#exec** — escalations to Eric.
 - **Discord / WhatsApp** — Eric talks to the team; the team talks to each other.
 
-## 6. Current open questions
+## 6. Product questions — status
 
-Deliberately unanswered — this is the work:
+Three of these were answered by Eric on 2026-10-23 and are recorded in
+`desks/product/2026-10-23-product-decisions-accepted.md`. One is now Curator's to propose.
 
-1. What is the actual product? Web-first or app-first? Both?
-2. Where does the activity data come from? Curated, scraped, licensed, user-generated?
-3. What is the first geography — Ottawa-Gatineau, or somewhere else?
-4. What is the revenue model, if any?
-5. What are the first three features worth building?
-6. Who is the first user, precisely?
+| # | Question | Status |
+|---|---|---|
+| 1 | What is the actual product? Web-first or app-first? | ✅ **Web-first, map-first** with chat as a sidecar. No native app in v1. |
+| 2 | Where does the activity data come from? Curated, scraped, licensed, user-generated? | ⏳ **Open** — Scout's sourcing plan owns this. Not settled by the 2026-10-23 decisions. |
+| 3 | What is the first geography? | ✅ **Ottawa–Gatineau.** |
+| 4 | What is the revenue model, if any? | ✅ **No consumer paywall in v1.** Lead with affiliate take-rate at the map pin, then self-serve merchant listings; premium only for value-adds, and never gating the answer. |
+| 5 | What are the first three features worth building? | ⏳ **Curator's to propose** (raised in `#product`, pending Eric's confirmation). |
+| 6 | Who is the first user, precisely? | ✅ An Ottawa–Gatineau local hunting "what to do tonight" under weather + budget constraints. |
+
+**Still genuinely open:** #2 (data sourcing) and #5 (first three features). Everything else
+is decided and recorded.
 
 ## 7. Standing principles
 

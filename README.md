@@ -35,6 +35,7 @@ a separate Hermes profile with its own persona, memory, and desk.
 | **Forge** | Principal Software Architect | `desks/engineering/` |
 | **Sentinel** | Head of Quality & Release (production gate) | `desks/quality/` |
 | **Concierge** | Chief Operating Officer | `desks/ops/` |
+| **Curator** | Head of Product & Design | `desks/product/` |
 
 They talk to Eric over Discord and collaborate through the desks and a kanban
 board. See `docs/CHARTER.md` for authority and gates, and `docs/DISPATCH.md` for

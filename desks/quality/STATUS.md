@@ -301,3 +301,39 @@ Every release verdict is written to `desks/quality/releases/<YYYY-MM-DD>-<releas
 
 **Owner:** Sentinel (Head of Quality & Release).
 **Last updated:** 2026-10-21 · **Pre-v1; no release shipped.**
+
+---
+
+## 10. Security & compliance — release-readiness checklist additions (S-x)
+
+**Owner:** Sentinel (Head of Quality & Release). These items are added to the production
+gate checklist as a **security & compliance** section. S-1…S-6 are mandatory for **any**
+auth or money change; S-7…S-14 are mandatory before the **first** account/money feature ships.
+Full rule text lives in `desks/quality/SECURITY-REVIEW-SCOPE.md` (§2–§4). Evidence files are
+recorded in the verdict file for the gate run.
+
+| ID | Checklist item (added) | Evidence |
+|---|---|---|
+| S-1 | Auth endpoint rate limits configured and passing (login, OTP resend, sign-up). | unit + sandbox test + code review |
+| S-2 | Session cookie flags audited in browser: `HttpOnly`, `Secure`, `SameSite`. | browser check |
+| S-3 | Security headers present: CSP, HSTS, X-Frame-Options, Referrer-Policy (`no-referrer` on link-bearing pages). | `qa/headers-audit.txt` |
+| S-4 | Secrets scan: zero secrets committed in this release. | `qa/secrets-scan.txt` |
+| S-5 | Dependency audit: no High/Critical open vulnerabilities in the pinned toolchain. | `qa/dependency-audit.txt` |
+| S-6 | PCI statement confirmed: no PAN in our systems (PCI-SAQ-A scope, delegated provider). | code review + static scan |
+| S-7 | Guest plan URL: entropy ≥ 128-bit, 30-day absolute expiry, server-side revocation, `no-referrer`, no logging — all pass. | unit + sandbox + browser |
+| S-8 | OAuth: PKCE + `state` verification + exact redirect-URI allowlist pass. | unit + sandbox |
+| S-9 | Account enumeration test passes (identical confirmation emails, generic errors). | unit |
+| S-10 | Webhook signature validation + idempotency tested. | sandbox + e2E |
+| S-11 | Financial audit log append-only verified (receipts + ledger). | unit + code review |
+| S-12 | Reversibility confirmed: session revoke, guest-link revoke, refunds/voids. | test + code review |
+| S-13 | PIPEDA data-residency decision recorded (Clerk or self-hosted) + consent approach. | written decision (§7 D-1) |
+| S-14 | Staged rollout enabled (feature flag + canary) for auth/money changes. | deployment config |
+
+> **Execution convention:** run S-1…S-14 in order from a gate run. For each item record the
+> result (`PASS`/`FAIL`/`NOT-EXECUTED`) and the evidence file. Stop and **BLOCK** the release at
+> the first **FAIL**. Do not re-order, do not substitute, do not skip. S-1…S-6 are part of the
+> G-x gate; S-7…S-14 gate the first account/money feature.
+
+---
+
+## 11. Current status and next actions
