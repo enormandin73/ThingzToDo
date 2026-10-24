@@ -299,3 +299,16 @@ Then:
   - WhatsApp: "Eric Normandin" — **613-447-3742**
   - LinkedIn: linkedin.com/in/jeneric
 - **Irock** — orchestrator, created this team
+
+---
+
+## 4b. Kanban dispatcher frozen / stopped (fresh)
+
+**Symptom:** The kanban board stops auto-dispatching — `hermes kanban dispatch --dry-run` reports no spawns, and cards sit `ready` while the health sweep reports nothing wrong at the desk level. To an observer the board looks *idle*, but it is frozen.
+
+**Diagnosis (gateway.log heartbeats):** the embedded dispatcher logs `kanban dispatcher [default]: spawned=N` every ~60s. The health check (`thingztodo_health_check.py --json`) watches those ticks:
+
+- **STOPPED** — no tick in `DISPATCHER_STALE_SECONDS` (30 min), zero worker processes, zero ready tasks.
+- **FROZEN** — no tick in `DISPATCHER_GRACE_SECONDS` (10 min) **and** ready tasks are waiting (no workers to take them).
+
+**Fix:** run `python3 ~/.hermes/profiles/concierge/scripts/thingztodo_health_check.py --json` (or the cron job `thingztodo-fleet-health`). Restart the gateway/dispatcher, confirm a fresh `kanban dispatcher [default]: spawned=` tick in `tail ~/.hermes/logs/gateway.log`, and verify `kanban.db` ready/running counts via `_sqlite_count`. `--selftest` proves the classification (echo 3/3).

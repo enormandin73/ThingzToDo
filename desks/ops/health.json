@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24 08:53:53",
+  "generated_at": "2026-10-24 09:38:30",
   "gateway_running": true,
   "agents": {
     "scout": {
@@ -11,8 +11,8 @@
       "errors": [],
       "desk": "/Users/martennormandin/thingztodo/desks/research",
       "desk_exists": true,
-      "newest_output": "2026-10-24 08:35",
-      "hours_since_output": 0.3,
+      "newest_output": "2026-10-24 09:13",
+      "hours_since_output": 0.4,
       "stale": false,
       "reason": "",
       "name": "Scout",
@@ -27,8 +27,8 @@
       "errors": [],
       "desk": "/Users/martennormandin/thingztodo/desks/engineering",
       "desk_exists": true,
-      "newest_output": "2026-10-22 22:44",
-      "hours_since_output": 34.2,
+      "newest_output": "2026-10-24 09:06",
+      "hours_since_output": 0.5,
       "stale": false,
       "reason": "",
       "name": "Forge",
@@ -44,7 +44,7 @@
       "desk": "/Users/martennormandin/thingztodo/desks/quality",
       "desk_exists": true,
       "newest_output": "2026-10-22 22:37",
-      "hours_since_output": 34.3,
+      "hours_since_output": 35.0,
       "stale": false,
       "reason": "",
       "name": "Sentinel",
@@ -59,14 +59,16 @@
       "errors": [],
       "desk": "/Users/martennormandin/thingztodo/desks/ops",
       "desk_exists": true,
-      "newest_output": "2026-10-24 08:49",
-      "hours_since_output": 0.1,
+      "newest_output": "2026-10-24 09:36",
+      "hours_since_output": 0.0,
       "stale": false,
       "reason": "",
       "name": "Concierge",
       "role": "Chief Operating Officer"
     }
   },
-  "problems": [],
+  "problems": [
+    "kanban dispatcher stopped: no tick in 253.4 min, 0 workers, 0 ready"
+  ],
   "blind_spot": "Concierge cannot restart itself. If this script runs inside Concierge's own process, a Concierge failure is invisible."
 }

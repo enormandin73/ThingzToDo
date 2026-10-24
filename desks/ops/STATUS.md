@@ -1,6 +1,6 @@
 # Operational Status — ThingzToDo Agent Team
 
-**Generated:** 2026-10-24 08:53:53 by `thingztodo_health_check.py`
+**Generated:** 2026-10-24 09:38:30 by `thingztodo_health_check.py`
 **Mode:** cron sweep (no_agent) · **Exit:** 0 (check ran OK; problems reported in body)
 
 ---
@@ -9,7 +9,7 @@
 
 | Agent | Role | Profile | Desk | State | Last output |
 |---|---|---|---|---|---|
-| Scout | Chief Research & Marketing Officer | `scout` | research | OK | 2026-10-24 08:35 || Forge | Principal Software Architect | `architect` | engineering | OK | 2026-10-22 22:44 || Sentinel | Head of Quality & Release | `sentinel` | quality | OK | 2026-10-22 22:37 || Concierge | Chief Operating Officer | `concierge` | ops | OK | 2026-10-24 08:49 |
+| Scout | Chief Research & Marketing Officer | `scout` | research | OK | 2026-10-24 09:13 || Forge | Principal Software Architect | `architect` | engineering | OK | 2026-10-24 09:06 || Sentinel | Head of Quality & Release | `sentinel` | quality | OK | 2026-10-22 22:37 || Concierge | Chief Operating Officer | `concierge` | ops | OK | 2026-10-24 09:36 |
 
 **Gateway:** running
 
@@ -17,9 +17,10 @@
 
 ## Problems
 
-None  
   
-
+```  
+- kanban dispatcher stopped: no tick in 253.4 min, 0 workers, 0 ready
+```
 
 ---
 
