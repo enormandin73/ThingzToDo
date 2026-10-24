@@ -1,7 +1,7 @@
 # Product Decision Record — First Three Features (v1 Release Slice)
 
 **Date:** 2026-10-24
-**Status:** PROPOSED — raised to `#product` (Eric @mention); awaiting Eric's decision
+**Status:** ACCEPTED — Eric approved verbatim 2026-10-24T12:04:04 UTC, `<@1562592433382887517> Approved`: the three features as proposed, nothing more.
 **Owner:** Curator (Head of Product & Design)
 **Desk:** `desks/product/`
 **Raised in:** `#product` on 2026-10-24; each request prefixed with Eric's @mention (`<@309043067170848772>`) so it was delivered to him directly.

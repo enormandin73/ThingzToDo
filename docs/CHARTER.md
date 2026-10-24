@@ -78,11 +78,10 @@ Three of these were answered by Eric on 2026-10-23 and are recorded in
 | 2 | Where does the activity data come from? Curated, scraped, licensed, user-generated? | ⏳ **Open** — Scout's sourcing plan owns this. Not settled by the 2026-10-23 decisions. |
 | 3 | What is the first geography? | ✅ **Ottawa–Gatineau.** |
 | 4 | What is the revenue model, if any? | ✅ **No consumer paywall in v1.** Lead with affiliate take-rate at the map pin, then self-serve merchant listings; premium only for value-adds, and never gating the answer. |
-| 5 | What are the first three features worth building? | ⏳ **Curator's to propose** (raised in `#product`, pending Eric's confirmation). |
+| 5 | What are the first three features worth building? | ✅ **Approved 2026-10-24.** (1) map-first search filtered by weather + budget at the pin; (2) activity detail card with one-tap save/plan via the chat sidecar; (3) self-serve Ottawa–Gatineau merchant listing with affiliate tagging. Build order: 1 → 2 → 3. |
 | 6 | Who is the first user, precisely? | ✅ An Ottawa–Gatineau local hunting "what to do tonight" under weather + budget constraints. |
 
-**Still genuinely open:** #2 (data sourcing) and #5 (first three features). Everything else
-is decided and recorded.
+**Still genuinely open:** #2 (data sourcing) only. Everything else is decided and recorded.
 
 ## 7. Standing principles
 
