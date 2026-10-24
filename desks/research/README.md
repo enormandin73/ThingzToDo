@@ -17,7 +17,8 @@ filename.
 | `app-store-reviews-activity-planning-complaints-2026-10-21.md` | App-store review complaints in activity recommendation & planning apps: 4 complaint categories (stuck state / poor suggestions / decision friction / lack of personalization) with representative quotes and a directional frequency estimate | 2026-10-21 | Complete |
 | `competitors.md` | **FINAL MERGED RANKED COMPETITIVE MAP** (all three clusters merged: Event discovery + activity marketplace; Weather-driven + LLM activity/plan assistants; Kids activity content + municipal tourism) — 15 real competitors across 7 categories, each with name/URL/strengths/weaknesses/pricing/one cited complaint, ranked by distance-to-value-prop, plus "who we beat and why" and "unverified/could not confirm" sections | 2026-10-21 | Complete (merged from t_8d4f9570, t_40b4c28a, t_50f847fd) |
 | `forum-reddit-activity-recommendation-threads-2026-10-21.md` | Forum & Reddit threads where users ask for activity recommendations, describe decision paralysis, or express frustration with existing solutions — 38+ threads with excerpts, an `explicit ask` flag, and a ranked recurring-themes summary | 2026-10-21 | Complete |
-| `src-note.md` | Research sourcing conventions | 2026-10-21 | Reference |
+|| `src-note.md` | Research sourcing conventions | 2026-10-21 | Reference |
+|| `activity-data-pipeline-and-ranking-2026-10-24.md` | **Charter OQ2 — data pipeline & ranking contract**: critical mass (600 primary / 1,200 stretch), per-source legal/ToS table (Google Places/Yelp/TripAdvisor REJECT; municipal open data + ECCC + OSM + event APIs USE-guarded), enrichment field spec with confidence stamps, ranking contract with engine-ADR amendments, agent roster (Miner/Adept/Warden/Curator/Concierge), per-1,000 cost model, unverified list | 2026-10-24 | Complete |
 
 ## Notes
 
